@@ -24,24 +24,29 @@ import pyautogui
 import time
 
 # Define the time interval in seconds
-time_interval = 5  # Adjust this as needed
-
+time_interval = 3  # Adjust this as needed
+i = 1
 while True:
     try:
         # Get the current mouse cursor position
         current_x, current_y = pyautogui.position()
 
         # Print the current position (optional)
-        print(f"Current position: ({current_x}, {current_y})")
+        print(f"Current position: ({current_x}, {current_y}) - {i}")
 
         # Change the mouse cursor position (you can set your own coordinates)
-        new_x = current_x + 1  # Example: move 50 pixels to the right
-        new_y = current_y + 1  # Example: move 50 pixels down
+        if (i%2 == 0):
+            new_x = current_x + 100  # Example: move 50 pixels to the right
+            new_y = current_y + 100
+        else:
+            new_x = current_x - 100  # Example: move 50 pixels to the right
+            new_y = current_y - 100
 
-        pyautogui.moveTo(new_x, new_y, duration=0.25)  # Duration is the time taken to move
+        pyautogui.moveTo(new_x, new_y, duration=1)  # Duration is the time taken to move
 
         # Wait for the specified time interval
         time.sleep(time_interval)
+        i = i + 1
 
     except Exception as e:
         print(f"An error occurred: {str(e)}")
