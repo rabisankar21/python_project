@@ -14,4 +14,5 @@ value = 95
 
 result = calculate_percentile(dataset, value)
 print("The percentile of", value, "is:", result)
+print(add)
 print("The percentile of", value, "is:", result)
