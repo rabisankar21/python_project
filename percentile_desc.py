@@ -14,8 +14,8 @@ def calculate_percentile(dataset, value):
     return percentile
 
 # Example usage:
-dataset = [3.26,33.33,75,100]
-value =3.26
+dataset = [4,1, 10, 2, 1, 3, 4, 3, 8 ,5]
+value =4
 
 result = calculate_percentile(dataset, value)
 print("The percentile of", value, "is:", result)
