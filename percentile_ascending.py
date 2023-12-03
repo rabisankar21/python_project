@@ -4,16 +4,18 @@ def calculate_percentile(dataset, value):
     n = len(sorted_dataset)
 
     rank = sorted_dataset.index(value)
-    percentile = (rank / (n-1)) * 100
+    if value == 100:
+        return 100
+    else:
+        percentile = (rank / (n - 1)) * 100
 
     return percentile
 
+
 # Example usage:
-dataset = [100,100,100,95,91]
-value = 95
+dataset = [60, 60, 64, 67, 80, 100, 71, 25, 50, 100 ]
+value = int(input("enter number: "))
 
 result = calculate_percentile(dataset, value)
 print("The percentile of", value, "is:", result)
 
-
-print("The percentile of", value, "is:", result)

@@ -24,7 +24,7 @@ import pyautogui
 import time
 
 # Define the time interval in seconds
-time_interval = 3  # Adjust this as needed
+time_interval = 300  # Adjust this as needed
 i = 1
 while True:
     try:
